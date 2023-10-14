@@ -33,7 +33,7 @@ const contactsSlice = createSlice({
     },
     deleteContact: {
       reducer(state, action) {
-        return state.filter(contact => contact.id != action.payload);
+        return state.filter(contact => contact.id !== action.payload);
       },
       prepare(contactId) {
         return {
